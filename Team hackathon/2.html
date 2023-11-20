@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Hotel Room Booking</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    .header {
+        text-align: center;
+        background-color: #8a23da;
+    }
+    .body{
+        background-color: #ce9df4;
+    }
+    .content{
+        text-align: left;
+        background-color: #ce9df4;
+    }
+    .footer{
+        background-color: #8a23da;
+    }
+</style>
+<body>
+    <div class="body">
+    <div class="header">
+        <h1>Online Hotel Room Booking</h1>
+    </div>
+
+    <div class="content">
+        <h2>Search for available rooms</h2>
+        <form>
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin"><br>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout"><br>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1"><br>
+             <br>
+            <input type="submit" value="Search"><br>
+        </form>
+
+        <h2>Available Rooms</h2>
+        <div class="rooms">
+            <!-- List available rooms here -->
+        </div>
+
+        <h2>Book a Room</h2>
+        <form>
+            <label for="room">Room:</label>
+            <select id="room" name="room">
+                <!-- List available rooms here -->
+            </select>
+
+            <label for="duration">Duration (nights):</label>
+            <input type="number" id="duration" name="duration" min="1">
+
+            <input type="submit" value="Book">
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2022 Online Hotel Room Booking</p>
+    </div>
+    </div>
+</body>
+</html>
