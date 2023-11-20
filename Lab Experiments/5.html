@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Flight Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    }
+    .header {
+        text-align: center;
+        
+    }
+    
+    .content{
+        text-align: left;
+       
+    }
+   
+    </style>
+<body>
+    <div class="body">
+    <div class="header">
+        <h1>Online Flight Reservation System</h1>
+    </div>
+
+    <div class="content">
+        <h2>Search for available flights</h2>
+        <form>
+            <label for="startpoint">Start Point:</label>
+            <input type="text" id="startpoint" name="startpoint">
+
+            <label for="endpoint">End Point:</label>
+            <input type="text" id="endpoint" name="endpoint">
+
+            <label for="date">Departure Date:</label>
+            <input type="date" id="date" name="date">
+
+            <input type="submit" value="Search">
+        </form>
+
+        <h2>Available Flights</h2>
+        <div class="flights">
+            <!-- List available flights here -->
+        </div>
+
+        <h2>Book a Flight</h2>
+        <form>
+            <label for="flight">Flight:</label>
+            <select id="flight" name="flight">
+                <!-- List available flights here -->
+            </select>
+
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1">
+
+            <input type="submit" value="Book">
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2022 Online Flight Reservation System</p>
+    </div>
+</div>
+</body>
+</html>

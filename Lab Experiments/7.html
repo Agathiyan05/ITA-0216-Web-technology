@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Beauty Parlour Appointment Booking System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="booking.js"></script>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Online Beauty Parlour Appointment Booking System</h1>
+        <h2>Available Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Haircut</h3>
+                <p>$50</p>
+                <button onclick="addToCart('Haircut')">Book Appointment</button>
+            </div>
+            <div class="service-box">
+                <h3>Manicure</h3>
+                <p>$35</p>
+                <button onclick="addToCart('Manicure')">Book Appointment</button>
+            </div>
+            <div class="service-box">
+                <h3>Pedicure</h3>
+                <p>$40</p>
+                <button onclick="addToCart('Pedicure')">Book Appointment</button>
+            </div>
+        </div>
+        <h2>Your Booking Summary</h2>
+        <div class="cart-container">
+            <!-- Services will be added here when the user clicks 'Book Appointment' -->
+        </div>
+        <h2>Payment Summary</h2>
+        <div class="summary-container">
+            <!-- Total amount and checkout button will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #08ac4b;
+            background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+            color: aliceblue;
+        }
+
+        .sidebar{
+         
+            text-align: center;
+            color: aliceblue;
+            font: bold;
+            
+        } 
+        .bar{
+            background-color: #17202160;
+            color: aliceblue;
+        }
+        form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    text-align: left;
+}
+
+form label,
+form input[type="text"],
+form input[type="submit"] {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form label {
+    text-align: left;
+    padding-right: 10px;
+    flex-basis: 50%;
+}
+
+form input[type="text"],
+form input[type="submit"] {
+    flex-basis: 50%;
+}
+
+form input[type="submit"] {
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="head">
+    <h2> Online Library </h2>
+</div>
+    <div class="sidebar">
+    <form id="bookForm">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="author">Author:</label><br>
+    <input type="text" id="author" name="author"><br>
+    <label for="year">Year:</label><br>
+    <input type="text" id="year" name="year"><br>
+    <label for="publisher">Publisher:</label><br>
+    <input type="text" id="publisher" name="publisher"><br>
+    <label for="category">Category:</label><br>
+    <input type="text" id="category" name="category"><br>
+    <button type="submit" id="Submitbutton">Submit</button>
+    </form>
+
+</div>
+
+    <h2>Books List</h2>
+    <table id="booksTable">
+       
+        <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Publisher</th>
+        <th>Category</th>
+        </tr>
+  
+    </table>
+
+    <script>
+         
+        document.getElementById('bookForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var title = document.getElementById('title').value;
+        var author = document.getElementById('author').value;
+        var year = document.getElementById('year').value;
+        var publisher = document.getElementById('publisher').value;
+        var category = document.getElementById('category').value;
+
+        var row = document.createElement('tr');
+
+        var cell1 = document.createElement('td');
+        var cell2 = document.createElement('td');
+        var cell3 = document.createElement('td');
+        var cell4 = document.createElement('td');
+        var cell5 = document.createElement('td');
+
+        cell1.innerHTML = title;
+        cell2.innerHTML = author;
+        cell3.innerHTML = year;
+        cell4.innerHTML = publisher;
+        cell5.innerHTML = category;
+
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
+        row.appendChild(cell4);
+        row.appendChild(cell5);
+
+        document.getElementById('booksTable').appendChild(row);
+
+        // Reset the form
+        document.getElementById('bookForm').reset();
+        });
+   
+    </script>
+</body>
+</html>
