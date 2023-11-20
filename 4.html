@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Train Reservation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    .header {
+        text-align: center;
+        background-color: #8a23da;
+    }
+    .body{
+        background-color: #ce9df4;
+    }
+    .content{
+        text-align: left;
+        background-color: #ce9df4;
+    }
+    .footer{
+        background-color: #8a23da;
+    }
+    </style>
+<body>
+    <div class="body">
+    <div class="header">
+        <h1>Online Train Reservation System</h1>
+    </div>
+
+    <div class="content">
+        <h2>Search for available trains</h2>
+        <form>
+            <label for="startpoint">Start Point:</label>
+            <input type="text" id="startpoint" name="startpoint">
+
+            <label for="endpoint">End Point:</label>
+            <input type="text" id="endpoint" name="endpoint">
+
+            <label for="date">Journey Date:</label>
+            <input type="date" id="date" name="date">
+
+            <input type="submit" value="Search">
+        </form>
+
+        <h2>Available Trains</h2>
+        <div class="trains">
+            <!-- List available trains here -->
+        </div>
+
+        <h2>Book a Train</h2>
+        <form>
+            <label for="train">Train:</label>
+            <select id="train" name="train">
+                <!-- List available trains here -->
+            </select>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" min="1">
+
+            <input type="submit" value="Book">
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2022 Online Train Reservation System</p>
+    </div>
+</div>
+</body>
+</html>
