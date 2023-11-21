@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Hospital Appointment Booking System</title>
+    <link rel="stylesheet" type="text/css" href="9.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Hospital Appointment Booking System</h1>
+        <form id="appointment-form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <h2>Appointment Information</h2>
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+            <br>
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+            <br>
+            <label for="appointment-department">Department:</label>
+            <select id="appointment-department" name="appointment-department" required>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="gastroenterology">Gastroenterology</option>
+                <option value="dermatology">Dermatology</option>
+            </select>
+            <br>
+            <label for="appointment-doctor">Doctor:</label>
+            <select id="appointment-doctor" name="appointment-doctor" required>
+                <option value="john-doe">John Doe</option>
+                <option value="jane-doe">Jane Doe</option>
+                <option value="smith-johnson">Smith Johnson</option>
+                <option value="jennifer-gilbert">Jennifer Gilbert</option>
+            </select>
+            <br>
+            <input type="submit" value="Book Appointment">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
