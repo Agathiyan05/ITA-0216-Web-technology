@@ -1,0 +1,87 @@
+<html lang="en">
+    <div class="Page">
+<body background="HC.jpg">
+  
+   <div class="Welcome">Welcome to Health and Fitness Tracker</div>
+   
+<div class="tracker">
+   
+    <div id="tracker">
+        <div id="weight">
+            <h2>Weight</h2>
+            <input type="number" id="weightInput" placeholder="Enter your weight (kg)">
+            <button onclick="recordWeight()">Record</button>
+        
+    </div>
+        <div id="calories">
+            <h2>Calories Burned</h2>
+            <input type="number" id="caloriesInput" placeholder="Enter calories burned">
+            <button onclick="recordCalories()">Record</button>
+        </div><br>
+    </div>
+    <div><button><a href="sns 2.html">Next page</a></div></button><br>
+
+    <div id="data">
+        <h2>Recorded Data</h2>
+        <ul id="dataList">
+            <!-- Recorded data will be displayed here -->
+        </ul>
+        </div>
+        
+    </div>
+    
+
+    <style>
+        .welcome{
+            color: rgb(249, 247, 247);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+
+        .tracker{
+            color: rgb(255, 255, 255);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        
+    </style>
+
+    <script>
+        // JavaScript functions to record and display data
+        const weightInput = document.getElementById("weightInput");
+        const caloriesInput = document.getElementById("caloriesInput");
+        const dataList = document.getElementById("dataList");
+
+        function recordWeight() {
+            const weight = weightInput.value;
+            if (weight) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Weight: ${weight} kg (Recorded at ${getCurrentTime()})`;
+                dataList.appendChild(listItem);
+                weightInput.value = "";
+                backc
+            }
+        }
+
+        function recordCalories() {
+            const calories = caloriesInput.value;
+            if (calories) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Calories Burned: ${calories} kcal (Recorded at ${getCurrentTime()})`;
+                dataList.appendChild(listItem);
+                caloriesInput.value = "";
+            }
+        }
+
+        function getCurrentTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            return timeString;
+        }
+    </script>
+
+</body>
+</div>
+</html>

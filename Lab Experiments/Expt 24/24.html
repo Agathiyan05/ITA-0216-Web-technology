@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Garbage Management System</h1>
+    </header>
+
+    <main>
+        <section class="admin">
+            <h2>Administrator</h2>
+            <form>
+                <label for="admin-name">Name:</label>
+                <input type="text" id="admin-name" required>
+                <br>
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <!-- Other functions for administrator will be implemented similarly -->
+        </section>
+
+        <section class="general-public">
+            <h2>General Public</h2>
+            <form>
+                <label for="public-name">Name:</label>
+                <input type="text" id="public-name" required>
+                <br>
+                <label for="public-email">Email:</label>
+                <input type="email" id="public-email" required>
+                <br>
+                <label for="public-password">Password:</label>
+                <input type="password" id="public-password" required>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+            <form>
+                <label for="public-login-email">Email:</label>
+                <input type="email" id="public-login-email" required>
+                <br>
+                <label for="public-login-password">Password:</label>
+                <input type="password" id="public-login-password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <!-- Other functions for general public will be implemented similarly -->
+        </section>
+
+        <section class="driver">
+            <h2>Driver</h2>
+            <form>
+                <label for="driver-name">Name:</label>
+                <input type="text" id="driver-name" required>
+                <br>
+                <label for="driver-password">Password:</label>
+                <input type="password" id="driver-password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <!-- Other functions for driver will be implemented similarly -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Garbage Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

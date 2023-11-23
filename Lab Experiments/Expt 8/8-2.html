@@ -1,0 +1,83 @@
+<html lang="en">
+<body background="HC.jpg">
+    <div class="page">Health and Fitness Tracker - Page 2</div>
+
+    <div class="f">
+        <button><a href="1-2.html">LOG OUT</a></button>
+     </div>
+
+    <div class="statistics">
+        <h2>Statistics</h2>
+        <p>Here are some statistics based on your recorded data:</p>
+        <ul>
+            <li>Total Weight Entries: <span id="totalWeightEntries">0</span></li>
+            <li>Total Calories Burned: <span id="totalCaloriesBurned">0</span> kcal</li>
+        </ul>
+    
+
+    <div id="charts">
+        <h2>Charts</h2>
+        <!-- Add chart elements here (e.g., using charting libraries like Chart.js) -->
+    </div>
+
+   <button><a href="8.html">Go back to Page 1</a></button>
+
+
+</div>
+
+    <style>
+        .page{
+            color: rgb(249, 247, 247);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+
+        .f{
+            text-align: end;
+            text
+        }
+
+        .statistics{
+            color: rgb(255, 255, 255);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        
+    </style>
+
+    <script>
+        // JavaScript to calculate and display statistics
+        const dataList = document.getElementById("dataList");
+        const totalWeightEntries = document.getElementById("totalWeightEntries");
+        const totalCaloriesBurned = document.getElementById("totalCaloriesBurned");
+
+        // Calculate statistics from the recorded data
+        function calculateStatistics() {
+            const weightItems = dataList.querySelectorAll("li:contains('Weight')");
+            const caloriesItems = dataList.querySelectorAll("li:contains('Calories Burned')");
+
+            totalWeightEntries.textContent = weightItems.length;
+            
+            let totalCalories = 0;
+            for (const item of caloriesItems) {
+                const calories = parseFloat(item.textContent.match(/\d+\.\d+/)[0]);
+                totalCalories += calories;
+            }
+            totalCaloriesBurned.textContent = totalCalories.toFixed(2);
+        }
+
+        // Helper function to simulate :contains selector (not natively supported)
+        jQuery.expr[':'].contains = function(a, i, m) {
+            return jQuery(a).text().indexOf(m[3]) >= 0;
+        };
+
+        // Calculate statistics when the page loads
+        calculateStatistics();
+    </script>
+</body>
+</html>
+
+</body>
+</html>
